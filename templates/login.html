@@ -1,0 +1,29 @@
+{% extends 'shared/base.html' %}
+{% block title %} Login {% endblock %}
+{% block head %}
+    <!-- Login specific CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+{% block body %}
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+
+        <!-- Login card Title -->
+        <div class="fadeIn first mt-login">
+            <h4>Login</h4>
+        </div>
+
+        <!-- Login Form -->
+        <form method="POST" action="/">
+            <input type="text" id="{{key}}" required class="fadeIn second" placeholder="Enter your API Key here.." name="{{key}}" autocomplete="off">
+            <input type="submit" class="fadeIn fourth" value="Login">
+        </form>
+
+        <!-- Create API key -->
+        <div id="formFooter">
+            <a class="underlineHover" href="https://www.alphavantage.co/support/#api-key" target="new">Create free API key</a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+#additionalDetails {
+    width: 100%;
+}
+
+#details {
+    display: none;
+}
+
+.card-body h5 {
+    text-decoration: underline;
+}
